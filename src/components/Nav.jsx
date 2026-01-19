@@ -2,15 +2,15 @@ import { Download, FileText } from 'lucide-react';
 
 function Nav() {
   return (
-    <nav className='fixed w-full flex bg-white justify-between items-center xl:px-5 xl:py-4'>
-      <div className='flex xl:gap-3 items-center'>
-        <span className='bg-[#111827] xl:p-1.5 xl:rounded-md text-white'>
+    <nav className='sticky top-0 flex items-center justify-between bg-white xl:px-5 xl:py-4'>
+      <div className='flex items-center xl:gap-3'>
+        <span className='bg-[#111827] text-white xl:rounded-md xl:p-1.5'>
           <FileText />
         </span>
-        <span className='text-black font-semibold text-lg'>CV Builder</span>
+        <h1 className='text-lg font-semibold text-black'>CV Builder</h1>
       </div>
 
-      <div className='flex text-xs text-black gap-1.5 duration-150 xl:px-3 font-medium xl:py-2 border border-[#E6E7EB] xl:rounded-sm cursor-pointer hover:bg-[#F3F4F6]'>
+      <div className='flex cursor-pointer gap-1.5 border border-[#E6E7EB] text-xs font-medium text-black duration-150 hover:bg-[#F3F4F6] xl:rounded-sm xl:px-3 xl:py-2'>
         <span>
           <Download size={16} />
         </span>
