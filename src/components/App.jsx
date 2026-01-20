@@ -1,7 +1,9 @@
 import CvEdit from './CvEdit';
 import CvPreview from './CvPreview';
+import EducationalExp from './EducationalExp';
 import GeneralInfo from './GeneralInfo';
 import Nav from './Nav';
+import PracticalExp from './PracticalExp';
 
 const App = function () {
   return (
@@ -9,7 +11,9 @@ const App = function () {
       <Nav />
       <main className='mx-auto grid max-w-400 gap-8 lg:grid-cols-12 lg:p-8'>
         <CvEdit>
-          <GeneralInfo />
+          <GeneralInfo isEditing={false} />
+          <PracticalExp isEditing={false} />
+          <EducationalExp isEditing={false} />
         </CvEdit>
 
         <CvPreview></CvPreview>
