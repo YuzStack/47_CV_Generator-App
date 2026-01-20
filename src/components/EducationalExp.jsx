@@ -5,7 +5,7 @@ import Input from './Input';
 function EducationalExp({ isEditing }) {
   return (
     <div className='rounded-md border border-gray-200 bg-white'>
-      <div className='flex justify-between border-b border-gray-200 p-4 px-6'>
+      <div className='flex items-center justify-between border-b border-gray-200 p-4 px-6'>
         <h2 className='text-xl font-semibold text-[#111827]'>
           Educational Experience
         </h2>
@@ -16,7 +16,7 @@ function EducationalExp({ isEditing }) {
 
       {isEditing ? (
         <div className='space-y-6 px-6 py-4'>
-          <form className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] text-[#111827] p-4 pt-6'>
+          <form className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] p-4 pt-6 text-[#111827]'>
             <Button className='absolute top-3 right-3 cursor-pointer text-[#9CA3AF] duration-150 hover:text-[#EE4444]'>
               <Trash2 size={18} />
             </Button>
@@ -50,7 +50,7 @@ function EducationalExp({ isEditing }) {
             Rhode Island School of Design
           </h3>
           <p className='text-sm text-[#4B5563]'>BFA in Graphic Design</p>
-          <div className='text-xs text-[#6B7280] flex justify-between'>
+          <div className='flex items-center justify-between text-xs text-[#6B7280]'>
             <span>2012 – 2016</span>
             <span>Providence, RI</span>
           </div>

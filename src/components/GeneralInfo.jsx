@@ -4,7 +4,7 @@ import Input from './Input';
 function GeneralInfo({ isEditing }) {
   return (
     <div className='rounded-md border border-gray-200 bg-white'>
-      <div className='flex justify-between border-b border-gray-200 p-4 px-6'>
+      <div className='flex items-center justify-between border-b border-gray-200 p-4 px-6'>
         <h2 className='text-xl font-semibold text-[#111827]'>
           General Information
         </h2>
@@ -35,7 +35,7 @@ function GeneralInfo({ isEditing }) {
               Alex Morgan
             </h3>
             <p className='text-sm text-[#4B5563]'>Senior Product Designer</p>
-            <div className='text-sm text-[#6B7280] flex gap-4'>
+            <div className='flex gap-4 text-sm text-[#6B7280]'>
               <span>alex.morgan@example.com</span>
               <span>+1 (555) 123-4567</span>
               <span>San Francisco, CA</span>

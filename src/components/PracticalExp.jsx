@@ -5,7 +5,7 @@ import Input from './Input';
 function PracticalExp({ isEditing }) {
   return (
     <div className='rounded-md border border-gray-200 bg-white'>
-      <div className='flex justify-between border-b border-gray-200 p-4 px-6'>
+      <div className='flex items-center justify-between border-b border-gray-200 p-4 px-6'>
         <h2 className='text-xl font-semibold text-[#111827]'>
           Practical Experience
         </h2>
@@ -79,7 +79,7 @@ function PracticalExp({ isEditing }) {
         ) : (
           <>
             <div className='flex flex-col gap-1.5 border-b border-gray-200 pb-4 last:border-0 last:pb-0'>
-              <div className='flex justify-between'>
+              <div className='flex items-center justify-between'>
                 <h3 className='text-base font-semibold text-[#111827]'>
                   TechFlow Inc.
                 </h3>
@@ -95,7 +95,7 @@ function PracticalExp({ isEditing }) {
             </div>
 
             <div className='flex flex-col gap-1.5 border-b border-gray-200 pb-4 last:border-0 last:pb-0'>
-              <div className='flex justify-between'>
+              <div className='flex items-center justify-between'>
                 <h3 className='text-base font-semibold text-[#111827]'>
                   Creative Studio
                 </h3>
