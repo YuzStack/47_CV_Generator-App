@@ -7,7 +7,7 @@ function Input({ label, placeholder }) {
         </span>
         <input
           type='text'
-          className='h-10 rounded-sm border border-gray-200 bg-white text-sm focus:outline-[#111827] lg:px-3 lg:py-2'
+          className='h-10 rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm focus:outline-[#111827]'
           placeholder={placeholder}
         />
       </label>

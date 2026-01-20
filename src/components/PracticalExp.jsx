@@ -5,7 +5,7 @@ import Input from './Input';
 function PracticalExp({ isEditing }) {
   return (
     <div className='rounded-md border border-gray-200 bg-white'>
-      <div className='flex justify-between border-b border-gray-200 lg:p-4 lg:px-6'>
+      <div className='flex justify-between border-b border-gray-200 p-4 px-6'>
         <h2 className='text-xl font-semibold text-[#111827]'>
           Practical Experience
         </h2>
@@ -14,10 +14,10 @@ function PracticalExp({ isEditing }) {
         </Button>
       </div>
 
-      <div className='space-y-6 lg:px-6 lg:py-4'>
+      <div className='space-y-6 px-6 py-4'>
         {isEditing ? (
           <>
-            <form className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] text-[#111827] lg:p-4 lg:pt-6'>
+            <form className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] p-4 pt-6 text-[#111827]'>
               <Button className='absolute top-3 right-3 cursor-pointer text-[#9CA3AF] duration-150 hover:text-[#EE4444]'>
                 <Trash2 size={18} />
               </Button>
@@ -37,14 +37,14 @@ function PracticalExp({ isEditing }) {
                   Description
                 </span>
                 <textarea
-                  className='rounded-sm border border-gray-200 bg-white text-sm focus:outline-[#111827] lg:px-3 lg:py-2'
+                  className='rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm focus:outline-[#111827]'
                   placeholder='Describe your responsibilities and achievements...'
                   rows={4}
                 ></textarea>
               </label>
             </form>
 
-            <form className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] text-[#111827] lg:p-4 lg:pt-6'>
+            <form className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] p-4 pt-6 text-[#111827]'>
               <Button className='absolute top-3 right-3 cursor-pointer text-[#9CA3AF] duration-150 hover:text-[#EE4444]'>
                 <Trash2 size={18} />
               </Button>
@@ -64,7 +64,7 @@ function PracticalExp({ isEditing }) {
                   Description
                 </span>
                 <textarea
-                  className='rounded-sm border border-gray-200 bg-white text-sm focus:outline-[#111827] lg:px-3 lg:py-2'
+                  className='rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm focus:outline-[#111827]'
                   placeholder='Describe your responsibilities and achievements...'
                   rows={4}
                 ></textarea>

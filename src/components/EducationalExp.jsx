@@ -5,7 +5,7 @@ import Input from './Input';
 function EducationalExp({ isEditing }) {
   return (
     <div className='rounded-md border border-gray-200 bg-white'>
-      <div className='flex justify-between border-b border-gray-200 lg:p-4 lg:px-6'>
+      <div className='flex justify-between border-b border-gray-200 p-4 px-6'>
         <h2 className='text-xl font-semibold text-[#111827]'>
           Educational Experience
         </h2>
@@ -15,8 +15,8 @@ function EducationalExp({ isEditing }) {
       </div>
 
       {isEditing ? (
-        <div className='space-y-6 lg:px-6 lg:py-4'>
-          <form className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] text-[#111827] lg:p-4 lg:pt-6'>
+        <div className='space-y-6 px-6 py-4'>
+          <form className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] text-[#111827] p-4 pt-6'>
             <Button className='absolute top-3 right-3 cursor-pointer text-[#9CA3AF] duration-150 hover:text-[#EE4444]'>
               <Trash2 size={18} />
             </Button>
@@ -45,12 +45,12 @@ function EducationalExp({ isEditing }) {
           </Button>
         </div>
       ) : (
-        <div className='lg:flex lg:flex-col lg:gap-2 lg:px-6 lg:py-4'>
+        <div className='flex flex-col gap-2 px-6 py-4'>
           <h3 className='text-base font-medium text-[#111827]'>
             Rhode Island School of Design
           </h3>
           <p className='text-sm text-[#4B5563]'>BFA in Graphic Design</p>
-          <div className='text-xs text-[#6B7280] lg:flex lg:justify-between'>
+          <div className='text-xs text-[#6B7280] flex justify-between'>
             <span>2012 – 2016</span>
             <span>Providence, RI</span>
           </div>
