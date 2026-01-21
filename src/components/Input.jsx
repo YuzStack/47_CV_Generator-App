@@ -1,4 +1,4 @@
-function Input({ label, placeholder }) {
+function Input({ label, placeholder, name, value, onChange }) {
   return (
     <>
       <label className='flex w-full flex-col'>
@@ -7,6 +7,9 @@ function Input({ label, placeholder }) {
         </span>
         <input
           type='text'
+          name={name}
+          value={value}
+          onChange={onChange}
           className='h-10 rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm focus:outline-[#111827]'
           placeholder={placeholder}
         />
