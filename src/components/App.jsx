@@ -64,6 +64,34 @@ function App() {
   };
 
   // Educational Experience ‼️
+  // const [educationalExp, setEducationalExp] = useState({
+  //   isEditing: true,
+  //   education: [
+  //     {
+  //       id: crypto.randomUUID(),
+  //       school: '',
+  //       degree: '',
+  //       startDate: '',
+  //       endDate: '',
+  //       location: '',
+  //     },
+  //   ],
+  // });
+
+  const [educationalExp, setEducationalExp] = useState(
+    DATA_TEMPLATE.educationalExp,
+  );
+
+  const handleEducaExpisEditingTogg = function () {
+    setEducationalExp(curPractExp => ({
+      ...curPractExp,
+      isEditing: !curPractExp.isEditing,
+    }));
+  };
+
+  const handleEducaExpUpdate = function (newData) {
+    setEducationalExp({ ...newData });
+  };
 
   return (
     <div className='min-h-screen bg-[#F3F4F6] text-[#4B5563]'>
@@ -80,13 +108,17 @@ function App() {
             onEdit={handlePractExpisEditingTogg}
             onUpdate={handlePractExpUpdate}
           />
-          <EducationalExp isEditing={false} />
+          <EducationalExp
+            educationalExp={educationalExp}
+            onEdit={handleEducaExpisEditingTogg}
+            onUpdate={handleEducaExpUpdate}
+          />
         </CvEdit>
 
         <CvPreview>
           <GeneralInfoView generalInfo={generalInfo} />
           <PracticalExpView practicalExp={practicalExp} />
-          <EducationalExpView />
+          <EducationalExpView educationalExp={educationalExp} />
         </CvPreview>
       </main>
     </div>

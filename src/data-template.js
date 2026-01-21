@@ -5,10 +5,10 @@ const DATA_TEMPLATE = {
     email: 'yuzstackinnovation@gmail.com',
     phone: '+234 706 315 3269',
     location: 'Ilorin, KW',
-    isEditing: true,
+    isEditing: false,
   },
   practicalExp: {
-    isEditing: true,
+    isEditing: false,
     experience: [
       {
         id: crypto.randomUUID(),
@@ -29,6 +29,19 @@ const DATA_TEMPLATE = {
         location: 'Ilorin, KW',
         description:
           'Architected a patient-facing dashboard from scratch, utilizing React and Tailwind CSS to enable real-time appointment scheduling and medical record visualization. Implemented complex form validation and state management logic that improved data entry accuracy and reduced user navigation friction by 30%.',
+      },
+    ],
+  },
+  educationalExp: {
+    isEditing: false,
+    education: [
+      {
+        id: crypto.randomUUID(),
+        school: 'Kwara State University',
+        degree: 'Computer Engineering',
+        startDate: 'Jan 2021',
+        endDate: 'Present',
+        location: 'Malete, KW',
       },
     ],
   },

@@ -1,4 +1,4 @@
-function EducationalExpView() {
+function EducationalExpView({ educationalExp }) {
   return (
     <section>
       <h2 className='mb-4 border-b border-[#E6E7EB] pb-2 font-sans text-base font-semibold tracking-widest text-[#6B7280] uppercase'>
@@ -6,25 +6,25 @@ function EducationalExpView() {
       </h2>
 
       <div className='space-y-6'>
-        <div>
-          <div className='flex items-center justify-between'>
-            <h3 className='mb-1 text-lg font-semibold text-[#111827]'>
-              Rhode Island School of Design
-            </h3>
-            <span className='font-sans text-sm text-[#4B5563]'>
-              2012 – 2016
-            </span>
-          </div>
+        {educationalExp.education.map(edu => (
+          <div key={edu.id}>
+            <div className='flex items-center justify-between'>
+              <h3 className='mb-1 text-lg font-semibold text-[#111827]'>
+                {edu.school}
+              </h3>
+              <span className='font-sans text-sm text-[#4B5563]'>
+                {edu.startDate} – {edu.endDate}
+              </span>
+            </div>
 
-          <div className='flex items-center justify-between'>
-            <p className='text-md text-[#111827] italic'>
-              BFA in Graphic Design
-            </p>
-            <span className='font-sans text-sm text-[#6B7280]'>
-              Providence, RI
-            </span>
+            <div className='flex items-center justify-between'>
+              <p className='text-md text-[#111827] italic'>{edu.degree}</p>
+              <span className='font-sans text-sm text-[#6B7280]'>
+                {edu.location}
+              </span>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );
