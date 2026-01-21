@@ -2,7 +2,7 @@ import { Download, FileText } from 'lucide-react';
 
 function Nav() {
   return (
-    <nav className='sticky top-0 flex items-center justify-between bg-white px-3.5 py-2.5 sm:px-5 sm:py-4'>
+    <nav className='sticky top-0 z-10 flex items-center justify-between bg-white px-3.5 py-2.5 sm:px-5 sm:py-4'>
       <div className='flex items-center gap-2 sm:gap-3'>
         <span className='rounded-md bg-[#111827] p-1 text-white sm:rounded-md sm:p-1.5'>
           <FileText />

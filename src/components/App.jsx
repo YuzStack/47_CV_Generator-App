@@ -11,6 +11,7 @@ import PracticalExpView from './PracticalExpView';
 import DATA_TEMPLATE from '../data-template';
 
 function App() {
+  // General Information ‼️
   // const [generalInfo, setGeneralInfo] = useState({
   //   name: '',
   //   profession: '',
@@ -33,6 +34,37 @@ function App() {
     setGeneralInfo({ ...newData });
   };
 
+  // Practical Experience ‼️
+  // const [practicalExp, setPracticalExp] = useState({
+  //   isEditing: true,
+  //   experience: [
+  //     {
+  //       id: crypto.randomUUID(),
+  //       company: '',
+  //       position: '',
+  //       startDate: '',
+  //       endDate: '',
+  //       location: '',
+  //       description: '',
+  //     },
+  //   ],
+  // });
+
+  const [practicalExp, setPracticalExp] = useState(DATA_TEMPLATE.practicalExp);
+
+  const handlePractExpisEditingTogg = function () {
+    setPracticalExp(curPractExp => ({
+      ...curPractExp,
+      isEditing: !curPractExp.isEditing,
+    }));
+  };
+
+  const handlePractExpUpdate = function (newData) {
+    setPracticalExp({ ...newData });
+  };
+
+  // Educational Experience ‼️
+
   return (
     <div className='min-h-screen bg-[#F3F4F6] text-[#4B5563]'>
       <Nav />
@@ -43,13 +75,17 @@ function App() {
             onEdit={handleGenInfoisEditingTogg}
             onUpdate={handleGenInfoUpdate}
           />
-          <PracticalExp isEditing={false} />
+          <PracticalExp
+            practicalExp={practicalExp}
+            onEdit={handlePractExpisEditingTogg}
+            onUpdate={handlePractExpUpdate}
+          />
           <EducationalExp isEditing={false} />
         </CvEdit>
 
         <CvPreview>
           <GeneralInfoView generalInfo={generalInfo} />
-          <PracticalExpView />
+          <PracticalExpView practicalExp={practicalExp} />
           <EducationalExpView />
         </CvPreview>
       </main>
