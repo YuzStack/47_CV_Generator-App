@@ -9,9 +9,9 @@ function GeneralInfoView({ generalInfo }) {
       </p>
       <div className='flex gap-4 font-sans text-sm text-[#6B7280]'>
         <span>{generalInfo.email}</span>
-        <span className='text-gray-300'>•</span>
+        <span className='text-[#D1D5DB]'>•</span>
         <span>{generalInfo.phone}</span>
-        <span className='text-gray-300'>•</span>
+        <span className='text-[#D1D5DB]'>•</span>
         <span>{generalInfo.location}</span>
       </div>
     </header>

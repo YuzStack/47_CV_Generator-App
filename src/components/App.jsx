@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import CvEdit from './CvEdit';
 import CvPreview from './CvPreview';
 import EducationalExp from './EducationalExp';
@@ -8,7 +8,13 @@ import GeneralInfoView from './GeneralInfoView';
 import Nav from './Nav';
 import PracticalExp from './PracticalExp';
 import PracticalExpView from './PracticalExpView';
-import DATA_TEMPLATE from '../data-template';
+import {
+  EDUCATIONAL_EXP,
+  GENERAL_INFO,
+  PRACTICAL_EXP,
+} from '../data-templates';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 function App() {
   // General Information ‼️
@@ -21,7 +27,7 @@ function App() {
   //   isEditing: true,
   // });
 
-  const [generalInfo, setGeneralInfo] = useState(DATA_TEMPLATE.generalInfo);
+  const [generalInfo, setGeneralInfo] = useState(GENERAL_INFO);
 
   const handleGenInfoisEditingTogg = function () {
     setGeneralInfo(curGeneralInfo => ({
@@ -50,7 +56,7 @@ function App() {
   //   ],
   // });
 
-  const [practicalExp, setPracticalExp] = useState(DATA_TEMPLATE.practicalExp);
+  const [practicalExp, setPracticalExp] = useState(PRACTICAL_EXP);
 
   const handlePractExpisEditingTogg = function () {
     setPracticalExp(curPractExp => ({
@@ -78,9 +84,7 @@ function App() {
   //   ],
   // });
 
-  const [educationalExp, setEducationalExp] = useState(
-    DATA_TEMPLATE.educationalExp,
-  );
+  const [educationalExp, setEducationalExp] = useState(EDUCATIONAL_EXP);
 
   const handleEducaExpisEditingTogg = function () {
     setEducationalExp(curPractExp => ({
@@ -93,9 +97,29 @@ function App() {
     setEducationalExp({ ...newData });
   };
 
+  // Export to PDF feature ‼️
+  const previewRef = useRef();
+
+  const handleDownload = async function () {
+    const element = previewRef.current;
+
+    // 1. Capture the element as a canvas (image)
+    const canvas = await html2canvas(element, { scale: 2 }); // scale: 2 for high quality
+    const imgData = canvas.toDataURL('image/png');
+
+    // 2. Create pdf (a4 size)
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+    // 3. Add image to PDF and save
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save('my-resume.pdf');
+  };
+
   return (
     <div className='min-h-screen bg-[#F3F4F6] text-[#4B5563]'>
-      <Nav />
+      <Nav onDownload={handleDownload} />
       <main className='mx-auto grid max-w-400 gap-8 p-8 lg:grid-cols-12'>
         <CvEdit>
           <GeneralInfo
@@ -115,7 +139,7 @@ function App() {
           />
         </CvEdit>
 
-        <CvPreview>
+        <CvPreview previewRef={previewRef}>
           <GeneralInfoView generalInfo={generalInfo} />
           <PracticalExpView practicalExp={practicalExp} />
           <EducationalExpView educationalExp={educationalExp} />
