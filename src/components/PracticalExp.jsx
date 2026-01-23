@@ -57,7 +57,7 @@ function PracticalExp({ practicalExp, onEdit, onUpdate }) {
             {practicalExp.experience.map(exp => (
               <form
                 key={exp.id}
-                className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] p-4 pt-6 text-[#111827]'
+                className='relative space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] p-4 pt-6 text-[#111827]'
               >
                 <Button
                   onClick={handleDeleteExp.bind(exp.id)}
@@ -83,7 +83,7 @@ function PracticalExp({ practicalExp, onEdit, onUpdate }) {
                   placeholder='Product Manager'
                 />
 
-                <div className='flex gap-4'>
+                <div className='flex flex-col gap-4 sm:flex-row'>
                   <Input
                     value={exp.startDate}
                     onChange={handleInputUpdate}

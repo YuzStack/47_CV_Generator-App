@@ -120,7 +120,7 @@ function App() {
   return (
     <div className='min-h-screen bg-[#F3F4F6] text-[#4B5563]'>
       <Nav onDownload={handleDownload} />
-      <main className='mx-auto grid max-w-400 gap-8 p-8 lg:grid-cols-12'>
+      <main className='mx-auto grid max-w-400 gap-8 p-6 lg:grid-cols-12 lg:p-8'>
         <CvEdit>
           <GeneralInfo
             generalInfo={generalInfo}

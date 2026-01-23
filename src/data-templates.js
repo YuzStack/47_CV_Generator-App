@@ -4,11 +4,11 @@ const GENERAL_INFO = {
   email: 'yuzstackinnovation@gmail.com',
   phone: '+234 706 315 3269',
   location: 'Ilorin, KW',
-  isEditing: false,
+  isEditing: true,
 };
 
 const PRACTICAL_EXP = {
-  isEditing: false,
+  isEditing: true,
   experience: [
     {
       id: crypto.randomUUID(),
@@ -34,7 +34,7 @@ const PRACTICAL_EXP = {
 };
 
 const EDUCATIONAL_EXP = {
-  isEditing: false,
+  isEditing: true,
   education: [
     {
       id: crypto.randomUUID(),

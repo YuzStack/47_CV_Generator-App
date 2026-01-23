@@ -38,7 +38,7 @@ function GeneralInfo({ generalInfo, onEdit, onUpdate }) {
               placeholder='e.g. Senior Product Designer'
             />
 
-            <div className='flex gap-4'>
+            <div className='flex flex-col gap-4 sm:flex-row'>
               <Input
                 value={generalInfo.email}
                 onChange={handleInputUpdate}

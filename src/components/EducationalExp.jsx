@@ -55,7 +55,7 @@ function EducationalExp({ educationalExp, onEdit, onUpdate }) {
           {educationalExp.education.map(edu => (
             <form
               key={edu.id}
-              className='relative min-h-100 space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] p-4 pt-6 text-[#111827]'
+              className='relative space-y-4 rounded-sm border border-[#E6E7EB] bg-[#FCFDFD] p-4 pt-6 text-[#111827]'
             >
               <Button
                 onClick={handleDeleteEdu.bind(edu.id)}
@@ -82,7 +82,7 @@ function EducationalExp({ educationalExp, onEdit, onUpdate }) {
                 placeholder='Bachelor of Arts'
               />
 
-              <div className='flex gap-4'>
+              <div className='flex flex-col gap-4 sm:flex-row'>
                 <Input
                   value={edu.startDate}
                   onChange={handleInputUpdate}
