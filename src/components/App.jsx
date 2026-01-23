@@ -18,16 +18,16 @@ import jsPDF from 'jspdf';
 
 function App() {
   // General Information ‼️
-  // const [generalInfo, setGeneralInfo] = useState({
-  //   name: '',
-  //   profession: '',
-  //   email: '',
-  //   phone: '',
-  //   location: '',
-  //   isEditing: true,
-  // });
+  const [generalInfo, setGeneralInfo] = useState({
+    name: '',
+    profession: '',
+    email: '',
+    phone: '',
+    location: '',
+    isEditing: true,
+  });
 
-  const [generalInfo, setGeneralInfo] = useState(GENERAL_INFO);
+  // const [generalInfo, setGeneralInfo] = useState(GENERAL_INFO);
 
   const handleGenInfoisEditingTogg = function () {
     setGeneralInfo(curGeneralInfo => ({
@@ -41,22 +41,22 @@ function App() {
   };
 
   // Practical Experience ‼️
-  // const [practicalExp, setPracticalExp] = useState({
-  //   isEditing: true,
-  //   experience: [
-  //     {
-  //       id: crypto.randomUUID(),
-  //       company: '',
-  //       position: '',
-  //       startDate: '',
-  //       endDate: '',
-  //       location: '',
-  //       description: '',
-  //     },
-  //   ],
-  // });
+  const [practicalExp, setPracticalExp] = useState({
+    isEditing: true,
+    experience: [
+      {
+        id: crypto.randomUUID(),
+        company: '',
+        position: '',
+        startDate: '',
+        endDate: '',
+        location: '',
+        description: '',
+      },
+    ],
+  });
 
-  const [practicalExp, setPracticalExp] = useState(PRACTICAL_EXP);
+  // const [practicalExp, setPracticalExp] = useState(PRACTICAL_EXP);
 
   const handlePractExpisEditingTogg = function () {
     setPracticalExp(curPractExp => ({
@@ -70,21 +70,21 @@ function App() {
   };
 
   // Educational Experience ‼️
-  // const [educationalExp, setEducationalExp] = useState({
-  //   isEditing: true,
-  //   education: [
-  //     {
-  //       id: crypto.randomUUID(),
-  //       school: '',
-  //       degree: '',
-  //       startDate: '',
-  //       endDate: '',
-  //       location: '',
-  //     },
-  //   ],
-  // });
+  const [educationalExp, setEducationalExp] = useState({
+    isEditing: true,
+    education: [
+      {
+        id: crypto.randomUUID(),
+        school: '',
+        degree: '',
+        startDate: '',
+        endDate: '',
+        location: '',
+      },
+    ],
+  });
 
-  const [educationalExp, setEducationalExp] = useState(EDUCATIONAL_EXP);
+  // const [educationalExp, setEducationalExp] = useState(EDUCATIONAL_EXP);
 
   const handleEducaExpisEditingTogg = function () {
     setEducationalExp(curPractExp => ({
